@@ -1,0 +1,466 @@
+/*การเลือก (Selectors)*/
+
+
+/*Type Selector (เลือกตามชื่อแท็ก)*/
+p {
+  color: red;
+}
+/*เลือกทุกแท็ก <p> */
+
+/*Class Selector (เลือกตามคลาส)*/
+.class-name {
+  font-size: 16px;
+}
+/*เลือกทุก element ที่มี class="class-name"*/
+
+/*ID Selector (เลือกตาม ID)*/
+#id-name {
+  background-color: yellow;
+}
+/*เลือก element ที่มี id="id-name"*/
+
+/*Universal Selector (เลือกทุกองค์ประกอบ)*/
+* {
+  margin: 0;
+}
+/*เลือกทุกองค์ประกอบในหน้าเว็บและกำหนดให้มี margin เป็น 0*/
+
+/*Descendant Selector (เลือก element ที่อยู่ภายในองค์ประกอบอื่น)*/
+div p {
+  color: blue;
+}
+/*เลือกทุก <p> ที่อยู่ภายใน <div> แล้วกำหนดให้ข้อความเป็นสีน้ำเงิน*/
+
+/*Child Selector (เลือก element ที่เป็นลูกโดยตรง)*/
+div > p {
+  color: green;
+}
+/*เลือกทุก <p> ที่เป็นลูกโดยตรงของ <div> แล้วกำหนดสีข้อความเป็นสีเขียว*/
+
+/*2. คุณสมบัติ (Properties) และค่า (Values)
+การปรับแต่งลักษณะต่างๆ ขององค์ประกอบใน HTML จะใช้คุณสมบัติ (properties) และค่าต่างๆ เช่น:
+
+สี (Color)
+
+color: red;  /* สีข้อความ */
+/*background-color: yellow; /* สีพื้นหลัง */
+/* (Font Size) ขนาดฟอนต์*/
+/*font-size: 16px;
+/*ตัวอักษร (Font Family)*/
+/*font-family: Arial, sans-serif;
+/*การจัดตำแหน่งข้อความ (Text Alignment)*/
+/*text-align: center;  /* จัดให้อยู่กลาง */
+/*ระยะห่าง (Margin และ Padding)*/
+/* margin: 10px;  ระยะห่างภายนอก */
+/*padding: 20px;  /* ระยะห่างภายใน */
+/*ขอบ (Border)
+border: 1px solid black;  /* ขอบขนาด 1px สีดำ */
+/*ความกว้างและความสูง (Width & Height)
+width: 100px;
+height: 200px;
+3. กล่องการจัดการ (Box Model)
+กล่อง (Box Model) คือวิธีที่ CSS ใช้ในการจัดการพื้นที่ของแต่ละองค์ประกอบ โดยกล่องแต่ละอันจะมีลักษณะตามนี้:
+Content: เนื้อหาภายในกล่อง
+Padding: ช่องว่างระหว่างเนื้อหากับขอบของกล่อง
+Border: ขอบของกล่อง
+Margin: ช่องว่างภายนอกกล่อง
+การใช้ Box Model สามารถปรับแต่งได้ เช่น:
+div {
+  width: 300px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
+}
+4. การจัดตำแหน่ง (Positioning)
+มีหลายวิธีในการจัดตำแหน่งองค์ประกอบ ได้แก่:
+
+Static: จัดตำแหน่งตามปกติ
+css
+คัดลอกโค้ด
+div {
+  position: static;
+}
+Relative: จัดตำแหน่งตามตำแหน่งปกติ แต่สามารถย้ายจากตำแหน่งที่อยู่
+css
+คัดลอกโค้ด
+div {
+  position: relative;
+  top: 20px;  /* ย้ายลง 20px */
+
+/*Absolute: จัดตำแหน่งโดยอิงจากตำแหน่งที่ใกล้ที่สุดที่มีการกำหนดตำแหน่ง
+css
+คัดลอกโค้ด
+div {
+  position: absolute;
+  left: 50px;  /* ย้ายไปทางขวา 50px */
+
+/*Fixed: ยึดตำแหน่งไม่ให้เลื่อนตามการเลื่อนหน้า*/
+div {
+  position: fixed;
+  bottom: 10px;  /* ยึดไว้ที่ด้านล่างของหน้าต่าง */
+}
+/*5. การใช้การเปลี่ยนแปลงและการแอนิเมชั่น (Transitions & Animations)
+Transitions: ใช้สำหรับการเปลี่ยนแปลงคุณสมบัติเมื่อผู้ใช้โต้ตอบ เช่น การเปลี่ยนสีเมื่อวางเมาส์
+button {
+  background-color: blue;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: red;
+}
+Animations: ใช้สำหรับการเคลื่อนไหวที่ซับซ้อน
+css
+คัดลอกโค้ด
+@keyframes example {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+div {
+  animation: example 2s infinite;
+}
+6. การใช้กริดและฟล็อก (Flexbox & Grid)
+Flexbox: ใช้สำหรับการจัดเรียงองค์ประกอบภายในคอนเทนเนอร์
+css
+คัดลอกโค้ด
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+CSS Grid: ใช้สำหรับการจัดเรียงหลายคอลัมน์และแถว
+css
+คัดลอกโค้ด
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+7. Pseudoclasses และ Pseudo-elements
+Pseudoclasses: ใช้ในการเลือกสถานะขององค์ประกอบ เช่น เมื่อมีการโต้ตอบ
+css
+คัดลอกโค้ด
+a:hover {
+  color: red;
+}
+Pseudo-elements: ใช้ในการเลือกบางส่วนขององค์ประกอบ เช่น การเพิ่มข้อความก่อนหรือหลัง
+css
+คัดลอกโค้ด
+p::before {
+  content: "Note: ";
+  font-weight: bold;
+}
+สรุป
+CSS ช่วยให้การออกแบบเว็บมีความยืดหยุ่นและมีประสิทธิภาพ การเรียนรู้คำสั่งต่างๆ เช่น Selectors, Properties, Positioning, Flexbox, Grid และ Animations จะช่วยให้สามารถควบคุมการแสดงผลของหน้าเว็บได้อย่างหลากหลายและตอบสนองต่อความต้องการของผู้ใช้
+
+
+คุณพูดว่า:
+มีเพิ่มเติมนอกจากนี้อีกไหมที่ใช้ในการสร้างเเว็บไซต์ การเพิ่มboxต่างๆ
+ChatGPT พูดว่า:
+ChatGPT
+ใน CSS นอกจากคำสั่งพื้นฐานที่กล่าวถึงไปแล้ว ยังมีคำสั่งและเทคนิคเพิ่มเติมที่สามารถใช้ในการเพิ่มกล่อง (Box) และปรับแต่งการแสดงผลของเว็บให้ดูดีและตอบสนองความต้องการของผู้ใช้งานมากขึ้น เช่น:
+
+1. Box Shadow (เงาของกล่อง)
+ใช้ในการเพิ่มเงาให้กับกล่องหรือองค์ประกอบต่างๆ เพื่อให้มีความลึก หรือมิติที่ดูน่าสนใจ
+
+css
+คัดลอกโค้ด
+div {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+คำอธิบาย:
+
+10px 10px: ระยะห่างในแนวนอนและแนวตั้งจากองค์ประกอบ
+15px: ขนาดของการเบลอ (blur)
+rgba(0, 0, 0, 0.2): สีของเงา (สีดำพร้อมความโปร่งใส 0.2)
+2. Border Radius (มุมโค้งของกล่อง)
+ใช้ในการทำให้มุมของกล่องหรือองค์ประกอบมีความโค้งมน
+
+css
+คัดลอกโค้ด
+div {
+  width: 200px;
+  height: 100px;
+  background-color: lightgreen;
+  border-radius: 15px;  /* โค้งมุม 15px */
+
+/*ถ้าต้องการโค้งมุมทั้งหมด:
+
+css
+คัดลอกโค้ด
+div {
+  border-radius: 50%;
+}
+3. Opacity (ความโปร่งใส)
+ใช้ในการกำหนดความโปร่งใสขององค์ประกอบ เพื่อให้ดูเบาบางหรือใส่เงามากขึ้น
+
+css
+คัดลอกโค้ด
+div {
+  background-color: red;
+  opacity: 0.5; /* 50% โปร่งใส */
+
+/*4. Z-index (การจัดลำดับชั้น)
+ใช้ในการจัดลำดับชั้นขององค์ประกอบที่ทับซ้อนกัน โดยที่ค่าที่สูงกว่าจะถูกแสดงเหนือค่าที่ต่ำกว่า
+
+css
+คัดลอกโค้ด
+div {
+  position: absolute;
+  z-index: 10;  /* จะอยู่บนกว่าองค์ประกอบที่มี z-index ต่ำกว่า */
+
+/*5. Flexbox (การจัดตำแหน่งและการจัดเรียง)
+ใช้สำหรับการจัดเรียงกล่องในคอนเทนเนอร์ให้มีความยืดหยุ่นและง่ายในการจัดตำแหน่ง
+
+css
+คัดลอกโค้ด
+.container {
+  display: flex;
+  justify-content: space-between;  /* จัดระยะห่างระหว่างองค์ประกอบ */
+  /*align-items: center;  /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+
+
+/*ตัวอย่างการใช้ Flexbox เพื่อจัดกล่องให้เรียงกันในแนวนอน:
+
+css
+คัดลอกโค้ด
+.container {
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  margin: 10px;
+}
+6. CSS Grid (การใช้ตารางในการจัดเรียง)
+ใช้สำหรับการจัดตำแหน่งและการจัดระเบียบขององค์ประกอบในรูปแบบตาราง โดยสามารถกำหนดแถวและคอลัมน์ได้ง่าย
+
+css
+คัดลอกโค้ด
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* สร้าง 3 คอลัมน์ที่กว้างเท่ากัน */
+  /*gap: 10px;  /* ระยะห่างระหว่างกล่อง */
+
+.box {
+  background-color: #4CAF50;
+  height: 100px;
+}
+/*1. Text Properties (คุณสมบัติการจัดการข้อความ)
+font-family: กำหนดประเภทของฟอนต์ที่ใช้
+
+css
+คัดลอกโค้ด
+font-family: 'Arial', sans-serif;
+font-size: กำหนดขนาดของฟอนต์
+
+css
+คัดลอกโค้ด
+font-size: 16px;
+font-weight: กำหนดน้ำหนัก (หนาหรือบาง) ของฟอนต์
+
+css
+คัดลอกโค้ด
+font-weight: bold;
+font-style: กำหนดลักษณะของฟอนต์ (เช่น อิตาลิก)
+
+css
+คัดลอกโค้ด
+font-style: italic;
+line-height: กำหนดความสูงของบรรทัดข้อความ
+
+css
+คัดลอกโค้ด
+line-height: 1.5;
+text-align: กำหนดการจัดตำแหน่งข้อความในองค์ประกอบ
+
+css
+คัดลอกโค้ด
+text-align: center; /* จัดกลาง */
+/*text-transform: เปลี่ยนรูปแบบตัวอักษร เช่น พิมพ์ใหญ่ทั้งหมด
+
+css
+คัดลอกโค้ด
+text-transform: uppercase;  /* เปลี่ยนเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+/*letter-spacing: กำหนดระยะห่างระหว่างตัวอักษร
+
+css
+คัดลอกโค้ด
+letter-spacing: 2px;
+text-decoration: กำหนดการตกแต่งข้อความ เช่น ขีดเส้นใต้หรือขีดทับ
+
+css
+คัดลอกโค้ด
+text-decoration: underline;  /* ขีดเส้นใต้ */
+/*2. Background Properties (คุณสมบัติพื้นหลัง)
+background-color: กำหนดสีพื้นหลัง
+
+css
+คัดลอกโค้ด
+background-color: #f0f0f0;
+background-image: กำหนดภาพพื้นหลัง
+
+css
+คัดลอกโค้ด
+background-image: url('background.jpg');
+background-size: กำหนดขนาดของภาพพื้นหลัง
+
+css
+คัดลอกโค้ด
+background-size: cover;  /* ขยายให้ภาพเต็มพื้นที่ */
+/*background-position: กำหนดตำแหน่งของภาพพื้นหลัง
+
+css
+คัดลอกโค้ด
+background-position: center center; /* จัดภาพให้ตรงกลาง */
+/*background-repeat: กำหนดว่าจะให้ภาพพื้นหลังซ้ำหรือไม่
+
+css
+คัดลอกโค้ด
+background-repeat: no-repeat;  /* ไม่ให้ซ้ำ */
+/*background-attachment: กำหนดภาพพื้นหลังว่าจะยึดติดกับหน้าจอหรือเลื่อนตามเนื้อหา
+
+css
+คัดลอกโค้ด
+background-attachment: fixed;  /* ยึดภาพพื้นหลังไม่ให้เลื่อน */
+/*3. Box Model Properties (คุณสมบัติการจัดการกล่อง)
+border: กำหนดขอบของกล่อง (สี, ขนาด, สไตล์)
+
+css
+คัดลอกโค้ด
+border: 2px solid #000;  /* ขอบขนาด 2px สีดำ */
+/*border-radius: กำหนดความโค้งของมุม
+
+css
+คัดลอกโค้ด
+border-radius: 10px;  /* โค้งมุม 10px */
+/*/*padding: กำหนดพื้นที่ภายในกล่องระหว่างเนื้อหากับขอบ
+
+css
+คัดลอกโค้ด
+padding: 20px;
+margin: กำหนดพื้นที่นอกกล่องระหว่างองค์ประกอบ
+
+css
+คัดลอกโค้ด
+margin: 10px;
+box-sizing: กำหนดว่าความกว้างและสูงจะรวม padding และ border หรือไม่
+
+css
+คัดลอกโค้ด
+box-sizing: border-box; /* รวม padding และ border ในขนาดที่กำหนด */
+/*4. Positioning Properties (คุณสมบัติการจัดตำแหน่ง)
+position: กำหนดวิธีการจัดตำแหน่ง (relative, absolute, fixed, sticky)
+
+css
+คัดลอกโค้ด
+position: relative;
+top, right, bottom, left: กำหนดตำแหน่งจากขอบในกรณีที่ใช้ position: relative, absolute, หรือ fixed
+
+css
+คัดลอกโค้ด
+top: 20px;
+left: 30px;
+z-index: กำหนดลำดับการซ้อนขององค์ประกอบ
+
+css
+คัดลอกโค้ด
+z-index: 10;
+5. Flexbox and Grid Properties (คุณสมบัติการจัดเรียงแบบยืดหยุ่นและกริด)
+Flexbox:
+display: กำหนดให้ใช้ flexbox
+
+css
+คัดลอกโค้ด
+display: flex;
+flex-direction: กำหนดทิศทางในการจัดเรียงองค์ประกอบใน flex container
+
+css
+คัดลอกโค้ด
+flex-direction: row;  /* เรียงตามแนวนอน */
+/*justify-content: กำหนดการจัดตำแหน่งแนวนอนขององค์ประกอบ
+
+css
+คัดลอกโค้ด
+justify-content: center;  /* จัดกลาง */
+/*align-items: กำหนดการจัดตำแหน่งในแนวตั้งขององค์ประกอบ
+
+css
+คัดลอกโค้ด
+align-items: center;  /* จัดกลางในแนวตั้ง */
+/*CSS Grid:
+display: กำหนดให้ใช้ grid
+
+css
+คัดลอกโค้ด
+display: grid;
+grid-template-columns: กำหนดจำนวนและขนาดของคอลัมน์
+
+css
+คัดลอกโค้ด
+grid-template-columns: repeat(3, 1fr);  /* 3 คอลัมน์ที่มีขนาดเท่ากัน */
+/*grid-template-rows: กำหนดจำนวนและขนาดของแถว
+
+css
+คัดลอกโค้ด
+grid-template-rows: 100px 200px;  /* แถวแรก 100px, แถวที่สอง 200px */
+/*grid-gap: กำหนดระยะห่างระหว่างแถวและคอลัมน์
+
+css
+คัดลอกโค้ด
+grid-gap: 20px;
+6. Transition and Animation Properties (คุณสมบัติการเปลี่ยนแปลงและแอนิเมชั่น)
+Transition:
+transition: กำหนดคุณสมบัติที่ต้องการให้เกิดการเปลี่ยนแปลงเมื่อมีการโต้ตอบ
+css
+คัดลอกโค้ด
+transition: all 0.3s ease;  /* การเปลี่ยนแปลงทั้งหมดใช้เวลา 0.3 วินาที */
+/*Animation:
+@keyframes: กำหนดการเปลี่ยนแปลงของแอนิเมชั่น
+
+css
+คัดลอกโค้ด
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+animation: กำหนดการใช้แอนิเมชั่น
+
+css
+คัดลอกโค้ด
+animation: slide 2s infinite;  /* ใช้แอนิเมชั่น slide ใช้เวลา 2 วินาที และทำซ้ำไปเรื่อยๆ */
+/*7. Overflow Properties (คุณสมบัติการจัดการการไหลของเนื้อหา)
+overflow: กำหนดว่าจะให้เนื้อหาที่เกินจากขนาดกล่องมีการแสดงผลอย่างไร
+
+css
+คัดลอกโค้ด
+overflow: hidden;  /* ซ่อนเนื้อหาที่เกิน */
+/*overflow-x และ overflow-y: กำหนดการไหลในแนวนอนและแนวตั้งแยกกัน
+
+css
+คัดลอกโค้ด
+overflow-x: auto;  /* เพิ่มแถบเลื่อนแนวนอนเมื่อเนื้อหาเกิน */
+/*overflow-y: scroll;  /* เพิ่มแถบเลื่อนแนวตั้งเสมอ */
+/*8. Cursor Properties (คุณสมบัติการเปลี่ยนแปลงลักษณะเมาส์)
+cursor: กำหนดรูปแบบของเคอร์เซอร์เมื่อผู้ใช้โต้ตอบกับองค์ประกอบ
+css
+คัดลอกโค้ด
+cursor: pointer;  /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อวางเมาส์ */
+/*9. Opacity and Visibility (ความโปร่งใสและการมองเห็น)
+opacity: กำหนดความโปร่งใสขององค์ประกอบ
+
+css
+คัดลอกโค้ด
+opacity: 0.5;  /* ทำให้โปร่งใส 50% */
+/*visibility: กำหนดว่าจะแสดงหรือซ่อนองค์ประกอบ
+
+css
+คัดลอกโค้ด
+visibility: hidden;  /* ซ่อนองค์ประกอบ */
+/*สรุป
+CSS มีคุณสมบัติ (Properties) และค่า (Values) ที่หลากหลายซึ่งสามารถใช้ในการจัดการกับทุกแง่มุมของการออกแบบเว็บไซต์ เช่น การจัดการข้อความ, พื้นหลัง, การจัดตำแหน่ง, แอนิเมชั่น, และกริด การเรียนรู้และใช้งานคุณสมบัติเหล่านี้ช่วยให้คุณสามารถสร้างเว็บไซต์ที่มีความยืดหยุ่นและตอบสนองต่อการใช้งานได้ดีขึ้น*/
+
+
+

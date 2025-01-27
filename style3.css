@@ -1,0 +1,160 @@
+
+body {
+    font-family: Krub;
+    background-color: #959191;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.student-profile {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.profile-header {
+   
+    padding: 25px;
+    background: linear-gradient(135deg,#c9c9c9,#333); 
+}
+
+.profile-header :hover{
+    transform: scale(2.00); 
+}
+
+.profile-pic {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.profile-body {
+    padding: 20px;
+}
+
+.profile-body h1 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-body p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    font-family: Krub;
+}
+
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.menu-list li {
+    margin-bottom: 15px;
+}
+
+
+.menu-link {
+    display: inline-block;
+    text-decoration: none;
+    background: dimgray;
+    color: rgb(239, 234, 234);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+
+.menu-list li:hover {
+    background: darkgrey; 
+}
+/* การกำหนดสไตล์พื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2.subheading {
+    text-align: center;
+    color: #333;
+}
+
+h2#รีวิวลูกค้า {
+    text-align: center;
+    color: #555;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #f5be8e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #faa34b;
+}
+
+input[type="reset"] {
+    background-color: #f0d3d3;
+}
+
+input[type="reset"]:hover {
+    background-color: #ab7979;
+}
+div.contact-item{
+    color: #d07553;
+
+}
+#text p{
+    font-family: Krub;
+
+}

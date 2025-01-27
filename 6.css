@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  .article-container {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+   
+  }
+  
+  .article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .article-content {
+    padding: 20px;
+  }
+  
+  .article-content h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center ;
+    
+  }
+  .article-container p{
+    text-align: left;
+    margin-left: 27.5%;
+  }

@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .body {
+    font-family: "Georgia", serif;
+    text-align: center;
+    background-color: #fff;
+}
+ .com{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    width: 95%;
+    margin: 0 auto;
+    padding:2px;
+    margin-top: 20px;
+    
+ }
+
+.conten{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    width: 100%;
+    margin: 0 auto;
+    padding:2px;
+    flex-wrap:wrap;
+    
+}
+header {
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px ;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: black;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+h2{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: inline-block;
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+   
+}
+.img {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  div img{
+    width: 250px;
+    height: 200px;
+    margin: 10px -10px;
+
+  }
+  .description {
+   text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+}

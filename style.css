@@ -1,0 +1,66 @@
+.card{
+    position: relative;
+    width: 250px;
+    background-color: rgb(111, 65, 235);
+    border: 2px solid;
+}
+.more{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 80px;
+    background-color: rgb(181, 18, 102);
+    border: 2px solid red;
+    
+
+}
+.desc{
+    background-color: rgb(218, 204, 195);
+    position: relative;
+    top: 15px;
+    left: 20px;
+}
+.head{
+    /* position: fixed;
+    top: 10px;
+    right: 30px; */
+}
+.pic{
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.colum2{
+    width: 800px;
+    float: left;
+}
+.colum3{
+    clear: both;
+    width: 300px;
+    float: left;
+}
+.last{
+   background-color: yellow;
+}
+
+
+/******************************/
+.col{
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(244, 156, 202);
+}
+.row2{
+    clear: left;
+    background-color: aquamarine;
+}
+.footer{
+    clear: both;
+
+}
+.last{
+    clear: both;
+}
